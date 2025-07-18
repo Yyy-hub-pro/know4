@@ -1,0 +1,56 @@
+[
+  {
+    "id": "hr_job_001",
+    "name": "人才获取专员 (TA)",
+    "layer": 2,
+    "color": "#ef4444",
+    "size": 20,
+    "description": "负责招聘与人才获取的专业岗位",
+    "full_name": "Talent Acquisition Specialist"
+  },
+  {
+    "id": "hr_job_002",
+    "name": "人力资源业务合作伙伴 (HRBP)",
+    "layer": 2,
+    "color": "#8b5cf6",
+    "size": 20,
+    "description": "战略业务伙伴，负责组织发展",
+    "full_name": "Human Resources Business Partner"
+  },
+  {
+    "id": "hr_job_003",
+    "name": "薪酬福利专员/经理 (C&B)",
+    "layer": 2,
+    "color": "#06b6d4",
+    "size": 20,
+    "description": "负责薪酬福利体系设计与管理",
+    "full_name": "Compensation & Benefits Specialist/Manager"
+  },
+  {
+    "id": "hr_job_004",
+    "name": "人才管理与发展专员 (L&D)",
+    "layer": 2,
+    "color": "#f59e0b",
+    "size": 20,
+    "description": "负责员工培训与发展",
+    "full_name": "Learning & Development Specialist"
+  },
+  {
+    "id": "hr_job_005",
+    "name": "人力资源运营与员工关系专员 (HR Ops & ER)",
+    "layer": 2,
+    "color": "#84cc16",
+    "size": 20,
+    "description": "负责HR流程优化与员工关系管理",
+    "full_name": "HR Operations & Employee Relations Specialist"
+  },
+  {
+    "id": "hr_job_006",
+    "name": "通用基础与宏观视角",
+    "layer": 2,
+    "color": "#6b7280",
+    "size": 20,
+    "description": "所有HR角色均需具备的背景知识",
+    "full_name": "General Foundation & Macro Perspective"
+  }
+] 

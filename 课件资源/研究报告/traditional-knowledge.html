@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传统人力资源管理教学单元 | 北京物资学院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .unit {
+            margin-bottom: 50px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 30px;
+        }
+
+        .unit:last-child {
+            border-bottom: none;
+        }
+
+        .unit h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            border-radius: 15px;
+        }
+
+        .section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #27ae60;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h3 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-content {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .knowledge-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .knowledge-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+            color: #555;
+        }
+
+        .knowledge-list li:last-child {
+            border-bottom: none;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .filter-controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: #f0f0f0;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-button.active {
+            background: #27ae60;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>传统人力资源管理教学单元</h1>
+            <p>七大教学单元核心内容与知识要求详细梳理</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">教学单元</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">35+</div>
+                    <div class="stat-label">核心知识点</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">学习层次</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">覆盖完整</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="../../knowledge-system.html" class="nav-button">← 返回知识体系</a>
+            <div class="filter-controls">
+                <button class="filter-button active" onclick="filterByUnit('all')">全部单元</button>
+                <button class="filter-button" onclick="filterByUnit('unit1')">单元1</button>
+                <button class="filter-button" onclick="filterByUnit('unit2')">单元2</button>
+                <button class="filter-button" onclick="filterByUnit('unit3')">单元3</button>
+                <button class="filter-button" onclick="filterByUnit('unit4')">单元4</button>
+                <button class="filter-button" onclick="filterByUnit('unit5')">单元5</button>
+                <button class="filter-button" onclick="filterByUnit('unit6')">单元6</button>
+                <button class="filter-button" onclick="filterByUnit('unit7')">单元7</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="unit" data-unit="unit1">
+                <h2>📚 教学单元1：人力资源管理概述</h2>
+                
+                <div class="section">
+                    <h3>🎯 主要内容</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>掌握人力资源定义、特点</li>
+                            <li>掌握人力资源管理的5P模型图及其含义</li>
+                            <li>了解国内外的人力资源管理思想</li>
+                            <li>掌握人本管理的基本理论思想</li>
+                            <li>掌握数字人力资源管理研究的现状</li>
+                            <li>了解数字人力资源管理在中国的政策法规支持概况、实践概况及中外研究主题的异同</li>
+                            <li>了解数字人力资源管理的学科基础</li>
+                            <li>掌握技术与人力资源管理研究的发展阶段、研究未来和实践未来</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>📖 知识要求</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>什么是人力资源，及其与人才资源的区别和联系；人力资源的特点；5P模型图</li>
+                            <li>什么是HRM（人力资源管理）；HRM与人事管理的区别；HRM的重要性</li>
+                            <li>管理人性观的演进；人本主义的复兴</li>
+                            <li>理解数字人力资源管理时代的雇佣模式（劳务众包）、管理技术（"ABCD"）、管理机制（员工体验）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>🎯 教学重点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>掌握人力资源管理的基本概念及其指导思想的历史转变</li>
+                            <li>了解人力资源管理发展过程中的概念内涵及扩展</li>
+                            <li>数字人力资源管理时代的特征与研究现状</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>⚠️ 教学难点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>正确了解相关学科知识以及把握研究领域和方法</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="unit" data-unit="unit2">
+                <h2>📊 教学单元2：人力资源规划</h2>
+                
+                <div class="section">
+                    <h3>🎯 主要内容</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>了解人力资源管理规划的基本概念、内容，并叙述其基本程序</li>
+                            <li>理解并探讨人力资源需求与供给的预测方法</li>
+                            <li>说明人力资源规划的编制方法</li>
+                            <li>理解并掌握人力资源规划的概念与内容、需求和供给的基本计算方法</li>
+                            <li>能够进行简单的人力资源需求计算，并能应用人力损耗处理理论进行案例分析</li>
+                            <li>了解数字赋能下的人力资源规划</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>📖 知识要求</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>人力资源规划的概念、作用、内容</li>
+                            <li>人力资源供给预测和需求预测方法</li>
+                            <li>人力资源规划编制的主要内容</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>🎯 教学重点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>掌握人力资源规划的内容和意义</li>
+                            <li>能够进行简单的数据计算</li>
+                            <li>对人力资源的需求和供给有全面的理解</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>⚠️ 教学难点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>能根据课堂讲授的理论方法进行简单的计算</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="unit" data-unit="unit3">
+                <h2>🔍 教学单元3：工作分析</h2>
+                
+                <div class="section">
+                    <h3>🎯 主要内容</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>了解工作分析在人力资源管理中的重要作用</li>
+                            <li>掌握工作分析的具体方法、过程及工作说明书的编制</li>
+                            <li>理解工作分析在人力资源管理中的地位</li>
+                            <li>了解远程办公的概念和设计</li>
+                            <li>理解人工智能参与办公的相关知识</li>
+                            <li>掌握数字平台员工的工作设计</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>📖 知识要求</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>工作分析的基本概念与相关术语、作用与意义、历史发展过程</li>
+                            <li>工作分析方法</li>
+                            <li>工作评价方法</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>🎯 教学重点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>掌握工作分析的标准</li>
+                            <li>正确理解工作分析的应用</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>⚠️ 教学难点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>工作分析的处理方法与应用</li>
+                            <li>能针对新型工作模式运用所学知识有效管理人才</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="unit" data-unit="unit4">
+                <h2>👥 教学单元4：招聘与配置</h2>
+                
+                <div class="section">
+                    <h3>🎯 主要内容</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>通过介绍员工招聘和录用的方法与步骤，了解其复杂性，并能够设计结构化面试方案</li>
+                            <li>明确招聘的目的、程序和基本原则</li>
+                            <li>了解招聘的渠道、当前招聘工作的新趋势以及组织筛选标准</li>
+                            <li>掌握主要筛选方法的特点、优点和局限性</li>
+                            <li>掌握面试筛选方法的工作程序、常见错误类型和技巧</li>
+                            <li>理解人才盘点、人才画像、人力资源数据分析等人才管理工具</li>
+                            <li>掌握数字技术在招聘和甄选中的应用及作用</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>📖 知识要求</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>招聘的概念、作用、原则</li>
+                            <li>招聘流程和招聘渠道</li>
+                            <li>招聘面试方法</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>🎯 教学重点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>招聘的意义和方法及其对人力资源管理的重大意义</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>⚠️ 教学难点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>怎样才能在实际操作中招聘到组织需要的员工</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="unit" data-unit="unit5">
+                <h2>🎓 教学单元5：培训与开发</h2>
+                
+                <div class="section">
+                    <h3>🎯 主要内容</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>系统地传授组织中员工培训的意义、原则</li>
+                            <li>讲解人员培训的系统，以及员工培训方案设计的程序与方法</li>
+                            <li>要求学生掌握和练习员工培训课程的设计</li>
+                            <li>掌握数字技术在培训系统构建中的应用</li>
+                            <li>了解数字时代的企业人才培训需求</li>
+                            <li>了解数字培训市场发展历程与竞争格局</li>
+                            <li>掌握如何打造数字培训厂商的竞争优势</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>📖 知识要求</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>培训的概念、内容、种类、流程</li>
+                            <li>培训内容设计</li>
+                            <li>培训评估</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>🎯 教学重点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>掌握培训与员工自身发展以及与企业战略规划的意义</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>⚠️ 教学难点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>使学生能够通过学习掌握培训课程的设计</li>
+                            <li>数字化培训如何升级</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="unit" data-unit="unit6">
+                <h2>📈 教学单元6：绩效管理</h2>
+                
+                <div class="section">
+                    <h3>🎯 主要内容</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>系统地阐释绩效、绩效考评与绩效管理的关系</li>
+                            <li>学习绩效考核中的方法</li>
+                            <li>学会运用绩效面谈的技巧</li>
+                            <li>了解绩效管理的流程和组织实施要点</li>
+                            <li>理解算法管理与企业绩效管理的关系</li>
+                            <li>了解大数据和区块链技术如何应用到企业绩效管理当中</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>📖 知识要求</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>绩效管理和绩效考核的概念、内容、意义</li>
+                            <li>绩效考核的方法</li>
+                            <li>绩效管理的流程</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>🎯 教学重点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>掌握绩效管理主要方法</li>
+                            <li>了解绩效对工作和人的影响及危害</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>⚠️ 教学难点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>掌握绩效考核的执行者、时间选择、方法选择的基本内容</li>
+                            <li>了解面谈的技巧</li>
+                            <li>了解绩效考核中常见的问题</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="unit" data-unit="unit7">
+                <h2>💰 教学单元7：薪酬管理</h2>
+                
+                <div class="section">
+                    <h3>🎯 主要内容</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>薪酬的概念、功能、薪酬设计原则</li>
+                            <li>薪酬内部公平性的设计方法</li>
+                            <li>薪酬外部公平性的设计方法</li>
+                            <li>能力薪酬、绩效薪酬的设计方法</li>
+                            <li>薪酬的影响因素</li>
+                            <li>数字时代的薪酬福利管理</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>📖 知识要求</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>薪酬的内容、功能和原则，影响薪酬的因素</li>
+                            <li>岗位价值分析与薪酬的内部公平</li>
+                            <li>薪酬调查与外部公平</li>
+                            <li>能力薪酬的设计</li>
+                            <li>绩效薪酬的设计</li>
+                            <li>员工体验导向、大数据导向、云端导向的薪酬福利管理</li>
+                            <li>游戏化激励的实施流程和要点</li>
+                            <li>平台企业的薪酬福利管理</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>🎯 教学重点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>要求学生掌握薪酬含义、薪酬设计原则、薪酬方案设计的程序与方法</li>
+                            <li>数字时代的薪酬福利管理</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>⚠️ 教学难点</h3>
+                    <div class="section-content">
+                        <ul class="knowledge-list">
+                            <li>掌握一些薪酬的案例和设计方法</li>
+                            <li>举出具有代表性的实施方案</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterByUnit(unit) {
+            const units = document.querySelectorAll('.unit');
+            const buttons = document.querySelectorAll('.filter-button');
+            
+            // 更新按钮状态
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // 过滤显示
+            units.forEach(unitElement => {
+                if (unit === 'all' || unitElement.dataset.unit === unit) {
+                    unitElement.style.display = 'block';
+                } else {
+                    unitElement.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html> 

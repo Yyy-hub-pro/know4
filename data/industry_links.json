@@ -1,0 +1,134 @@
+[
+  {
+    "id": "industry_link_001",
+    "source": "hr_job_001",
+    "target": "hr_industry_001",
+    "relationship_type": "leads_to",
+    "skill_name": "战略招聘管理",
+    "evidence": "从TA到HR战略管理者：从完成招聘指标，转变为进行长期的劳动力规划和关键人才供应链建设",
+    "tools": "人才规划工具, 劳动力分析平台",
+    "strength": 0.8,
+    "knowledge_type": "传统"
+  },
+  {
+    "id": "industry_link_002",
+    "source": "hr_job_002", 
+    "target": "hr_industry_001",
+    "relationship_type": "leads_to",
+    "skill_name": "战略业务伙伴",
+    "evidence": "从HRBP到HR战略管理者：视角从支持单个业务单元，上升到设计整个集团的组织能力与人才战略",
+    "tools": "组织设计工具, 战略规划平台",
+    "strength": 0.9,
+    "knowledge_type": "传统"
+  },
+  {
+    "id": "industry_link_003",
+    "source": "hr_job_003",
+    "target": "hr_industry_001", 
+    "relationship_type": "leads_to",
+    "skill_name": "战略薪酬设计",
+    "evidence": "从C&B到HR战略管理者：从执行薪酬福利方案，深化为设计能够驱动公司长期战略的全面薪酬与价值主张",
+    "tools": "薪酬建模工具, 股权激励系统",
+    "strength": 0.85,
+    "knowledge_type": "传统"
+  },
+  {
+    "id": "industry_link_004",
+    "source": "hr_job_004",
+    "target": "hr_industry_001",
+    "relationship_type": "leads_to", 
+    "skill_name": "战略人才发展",
+    "evidence": "从L&D到HR战略管理者：从管理培训项目，转变为设计支撑公司战略的人才发展体系",
+    "tools": "人才发展平台, 继任规划系统",
+    "strength": 0.8,
+    "knowledge_type": "传统"
+  },
+  {
+    "id": "industry_link_005",
+    "source": "hr_job_005",
+    "target": "hr_industry_001",
+    "relationship_type": "leads_to",
+    "skill_name": "战略组织管理", 
+    "evidence": "从HR Ops到HR战略管理者：从处理日常事务，转变为设计支撑战略的组织架构和运营模式",
+    "tools": "组织设计工具, 流程管理平台",
+    "strength": 0.8,
+    "knowledge_type": "传统"
+  },
+  {
+    "id": "industry_link_006",
+    "source": "hr_job_006",
+    "target": "hr_industry_001",
+    "relationship_type": "leads_to",
+    "skill_name": "战略员工关系",
+    "evidence": "从ER到HR战略管理者：从处理员工关系问题，转变为构建健康、合规、有吸引力的组织文化",
+    "tools": "文化建设工具, 合规管理系统",
+    "strength": 0.8,
+    "knowledge_type": "传统"
+  },
+  {
+    "id": "industry_link_007",
+    "source": "hr_job_005",
+    "target": "hr_industry_002",
+    "relationship_type": "leads_to",
+    "skill_name": "HR系统架构设计",
+    "evidence": "从HR Ops到HR技术产品专家：从使用HRIS系统，转变为设计下一代HRIS系统的核心业务流程与自动化逻辑",
+    "tools": "系统设计工具, 流程建模软件",
+    "strength": 0.9,
+    "knowledge_type": "数字"
+  },
+  {
+    "id": "industry_link_008",
+    "source": "hr_job_003",
+    "target": "hr_industry_002",
+    "relationship_type": "leads_to",
+    "skill_name": "薪酬系统产品设计",
+    "evidence": "从C&B到HR技术产品专家：从在Excel中进行薪酬计算，深化为设计薪酬建模算法和薪酬分析系统",
+    "tools": "算法设计工具, 数据分析平台",
+    "strength": 0.85,
+    "knowledge_type": "数字"
+  },
+  {
+    "id": "industry_link_009",
+    "source": "hr_job_004",
+    "target": "hr_industry_002",
+    "relationship_type": "leads_to",
+    "skill_name": "学习平台产品设计",
+    "evidence": "从L&D到HR技术产品专家：从在LMS平台管理课程，跃迁为设计整合内容、社交、评估的数字化学习生态",
+    "tools": "学习平台设计工具, 内容管理系统",
+    "strength": 0.85,
+    "knowledge_type": "数字"
+  },
+  {
+    "id": "industry_link_010",
+    "source": "hr_job_002",
+    "target": "hr_industry_003",
+    "relationship_type": "leads_to",
+    "skill_name": "组织诊断咨询",
+    "evidence": "从HRBP到人力资本咨询顾问：从服务于内部业务部门，转变为服务于外部客户，解决更复杂的组织与人才问题",
+    "tools": "诊断工具, 咨询方法论",
+    "strength": 0.9,
+    "knowledge_type": "传统"
+  },
+  {
+    "id": "industry_link_011",
+    "source": "hr_job_004",
+    "target": "hr_industry_003",
+    "relationship_type": "leads_to",
+    "skill_name": "人才发展咨询",
+    "evidence": "从L&D到人力资本咨询顾问：从负责企业内部培训，深化为提供领导力发展、组织变革、文化建设等专项咨询服务",
+    "tools": "发展工具, 变革管理方法论",
+    "strength": 0.85,
+    "knowledge_type": "传统"
+  },
+  {
+    "id": "industry_link_012",
+    "source": "hr_job_003",
+    "target": "hr_industry_003",
+    "relationship_type": "leads_to",
+    "skill_name": "薪酬激励咨询",
+    "evidence": "从C&B到人力资本咨询顾问：从管理公司内部薪酬体系，深化为为不同行业设计高管薪酬、股权激励、销售激励等复杂方案",
+    "tools": "薪酬设计工具, 激励方案模板",
+    "strength": 0.85,
+    "knowledge_type": "传统"
+  }
+] 

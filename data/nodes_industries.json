@@ -1,0 +1,35 @@
+[
+  {
+    "id": "hr_industry_001",
+    "name": "HR战略管理者",
+    "layer": 3,
+    "description": "整合所有HR职能模块，从公司整体战略层面进行人才与组织管理，成为CEO在人才与组织议题上的核心参谋",
+    "category": "战略管理",
+    "key_skills": ["战略思维", "组织设计", "人才规划", "文化构建"],
+    "typical_titles": ["HRD", "CHRO", "人力资源总监", "人才战略官"],
+    "color": "#ef4444",
+    "size": 25
+  },
+  {
+    "id": "hr_industry_002", 
+    "name": "HR技术产品专家",
+    "layer": 3,
+    "description": "将HR管理思想产品化、系统化，设计HR技术解决方案，连接HR业务与IT研发",
+    "category": "技术产品",
+    "key_skills": ["产品设计", "技术架构", "数据分析", "业务流程"],
+    "typical_titles": ["HR产品经理", "HR技术专家", "HR系统架构师", "HR SaaS产品总监"],
+    "color": "#ef4444",
+    "size": 25
+  },
+  {
+    "id": "hr_industry_003",
+    "name": "人力资本咨询顾问", 
+    "layer": 3,
+    "description": "将HR专业知识产品化，为不同行业客户提供组织诊断、人才战略和变革管理咨询服务",
+    "category": "专业咨询",
+    "key_skills": ["商业诊断", "方案设计", "变革管理", "行业洞察"],
+    "typical_titles": ["人力资本顾问", "组织发展顾问", "HR咨询总监", "人才战略顾问"],
+    "color": "#ef4444",
+    "size": 25
+  }
+] 

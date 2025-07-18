@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字人力资源管理知识点详情 | 北京物资学院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .chapter {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 30px;
+        }
+
+        .chapter:last-child {
+            border-bottom: none;
+        }
+
+        .chapter h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+        }
+
+        .knowledge-item {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 5px solid #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .knowledge-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .knowledge-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .knowledge-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            flex: 1;
+        }
+
+        .mastery-level {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .mastery-master {
+            background: #e8f5e8;
+            color: #27ae60;
+        }
+
+        .mastery-understand {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .mastery-familiar {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .knowledge-details {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .filter-controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: #f0f0f0;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-button.active {
+            background: #3498db;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>数字人力资源管理知识点详情</h1>
+            <p>82个数字人力资源管理核心知识点完整梳理</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">82</div>
+                    <div class="stat-label">总知识点</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">17</div>
+                    <div class="stat-label">掌握</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">37</div>
+                    <div class="stat-label">理解</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">28</div>
+                    <div class="stat-label">了解</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="../../knowledge-system.html" class="nav-button">← 返回知识体系</a>
+            <div class="filter-controls">
+                <button class="filter-button active" onclick="filterByMastery('all')">全部</button>
+                <button class="filter-button" onclick="filterByMastery('master')">掌握</button>
+                <button class="filter-button" onclick="filterByMastery('understand')">理解</button>
+                <button class="filter-button" onclick="filterByMastery('familiar')">了解</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="chapter">
+                <h2>📚 第一章：数字人力资源管理概论</h2>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">1.1.1 不同的雇佣模式——劳务众包</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字时代的新型雇佣模式，通过平台化方式实现劳动力的灵活配置和众包协作。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">1.1.2 不同的管理技术——"ABCD"</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        人工智能(AI)、区块链(Blockchain)、云计算(Cloud)、大数据(Data)在人力资源管理中的应用。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">1.1.3 不同的管理机制——员工体验</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        以员工体验为中心的管理机制，关注员工全生命周期的体验优化。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">1.2.1 研究主题</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字人力资源管理的研究主题包括数字化转型、技术应用、管理创新等核心领域。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">1.2.2 研究理论</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字人力资源管理的基础理论框架，包括技术接受模型、创新扩散理论等。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">1.2.3 研究方法</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字人力资源管理的研究方法，包括定量分析、定性研究、混合方法等。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">1.3.1 数字人力资源管理在中国</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        中国数字人力资源管理的发展现状、政策支持和实践特点。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">1.3.2 数字人力资源管理的学科基础</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字人力资源管理的理论基础，包括管理学、心理学、信息技术等学科支撑。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">1.3.3 数字人力资源管理的未来</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字人力资源管理的发展趋势和未来发展方向预测。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">1.4 数字人力资源管理概论权威文献解读</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        经典文献的深度解读，理解数字人力资源管理的理论基础和实践指导。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">1.5 数字人力资源管理概论经典案例解读</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        典型企业案例的深入分析，学习数字人力资源管理的实践应用。
+                    </div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <h2>🔄 第二章：人力资源管理的数字化转型</h2>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">2.1.1 人力资源管理数字化转型的条件</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字化转型的前提条件，包括技术基础、组织准备、人才储备等要素。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">2.1.2 数字技术</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        支撑数字化转型的核心技术，包括云计算、大数据、人工智能等。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">2.1.3 传统人力资源管理的局限性</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        传统人力资源管理模式的不足，为数字化转型提供必要性论证。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">2.2.1 战略角度的人力资源管理数字化转型策略</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        从战略层面制定数字化转型策略，确保与企业战略的协同。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">2.2.2 业务角度的人力资源管理数字化转型策略</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        从业务需求出发，制定针对性的数字化转型策略。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">2.2.3 员工角度的人力资源管理数字化转型策略</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        以员工体验为中心，制定以人为本的数字化转型策略。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">2.3.1 数字化人力资源运营模式</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字化转型后的人力资源运营新模式和流程优化。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">2.3.2 数字化人力资源管理模式</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        基于数字技术的新型人力资源管理模式和架构。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">2.3.3 人力资源管理数据智能平台</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        集成数据分析和智能决策的人力资源管理平台建设。
+                    </div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <h2>👥 第三章：数字人才治理</h2>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">3.1 数字化人才的定义与分类</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字化人才的定义、分类和核心能力要求。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">3.1 数字能力的概念与分类</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字能力的概念界定和分类体系。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">3.2 数字化人才发展现状</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字化人才的发展现状和治理机制。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">3.2 不同主体在数字化人才治理中的角色</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        政府、企业、高校等不同主体在数字化人才治理中的作用和职责。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">3.3 数字化人才工作需求</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字化人才的工作需求分析和岗位设计。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">3.3 数字化人才的吸引激励与数字能力的培训开发</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字化人才的吸引、激励、培训开发等管理实践。
+                    </div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <h2>🎯 第四章：数字赋能的招聘和甄选</h2>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">4.1.1 数字经济概述</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字经济的基本概念、特征和发展趋势。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">4.1.2 数字经济对就业的影响</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字经济对就业结构、就业方式和就业质量的影响。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">4.1.3 企业员工和平台从业者对数字经济的态度</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        不同群体对数字经济发展的认知和态度分析。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">4.2.1 人才盘点</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        基于数据的人才盘点方法和工具应用。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">4.2.2 人才画像</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字化人才画像的构建方法和应用场景。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">4.2.3 人力资源数据分析</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        人力资源数据的收集、分析和应用方法。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">4.3.1 数字赋能主动配置</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        基于数字技术的主动人才配置策略和方法。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">4.3.2 数字赋能精准选拔</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        利用数字技术进行精准人才选拔的方法和工具。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">4.3.3 数字赋能快速入职</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字化入职流程设计和优化方法。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">4.4 数字赋能的招聘和甄选权威文献解读</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字招聘领域经典文献的深度解读和分析。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">4.5 数字赋能的招聘和甄选经典案例解读</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字招聘成功案例的深入分析和经验总结。
+                    </div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <h2>🎓 第五章：数字赋能的培训</h2>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">5.1.1 基于虚拟现实设备的培训</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        VR/AR技术在员工培训中的应用和实践。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">5.1.2 基于线上线下混合的培训</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        混合式培训模式的设计和实施方法。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">5.1.3 基于主动学习空间的培训</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        主动学习空间的设计理念和实现方法。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">5.2.1 数字化培训系统的建设和引进</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字化培训系统的规划、建设和实施策略。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">5.2.2 培训数据的分析和沉淀</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        培训数据的收集、分析和知识沉淀方法。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">5.2.3 数字化培训的效果和优势</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字化培训的效果评估和优势分析。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">5.3.1 数字时代的企业人才培训需求</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字时代企业培训需求的变化和特点。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">5.3.2 数字培训市场的发展历程与竞争格局</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字培训市场的发展历程和竞争格局分析。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">5.3.3 数字培训厂商的竞争优势打造</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字培训厂商如何构建和维持竞争优势。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">5.4 数字赋能的培训权威文献解读</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字培训领域经典文献的深度解读。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">5.5 数字赋能的培训经典案例解读</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字培训成功案例的深入分析和经验总结。
+                    </div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <h2>📈 第六章：数字赋能的绩效管理</h2>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">6.1.1 目标与关键结果（OKR）的内涵及特点</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        OKR方法的基本概念、特点和实施原则。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">6.1.2 OKR的实施流程</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        OKR从制定到执行到评估的完整流程。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">6.1.3 OKR的实践要点</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        OKR实施过程中的关键要点和注意事项。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">6.2.1 算法、算法管理的内涵</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        算法和算法管理的基本概念和内涵。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">6.2.2 基于算法管理的绩效管理</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        算法在绩效管理中的应用和实践。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">6.3.1 数字技术与绩效管理</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字技术在绩效管理中的应用和影响。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">6.3.2 大数据技术在绩效管理中的应用优势</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        大数据技术在绩效管理中的优势和应用场景。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">6.3.3 区块链技术在绩效管理中的应用优势</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        区块链技术在绩效管理中的优势和应用前景。
+                    </div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <h2>💰 第七章：数字赋能的激励管理</h2>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">7.1.1 员工体验导向的薪酬福利管理</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        以员工体验为中心的薪酬福利管理理念和实践。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">7.1.2 大数据导向的薪酬福利管理</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        基于大数据的薪酬福利管理方法和工具。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">7.1.3 云端导向的薪酬福利管理</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        基于云计算的薪酬福利管理系统和应用。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">7.2.1 基于大数据的薪酬管理创新</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        大数据驱动的薪酬管理创新方法和实践。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">7.2.2 基于游戏的激励模式</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        游戏化激励模式的设计和实施方法。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">7.3.1 平台企业的用工模式</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        平台企业特有的用工模式和管理特点。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">7.3.2 平台劳工的薪酬管理</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        平台劳工薪酬管理的特殊性和挑战。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">7.3.3 平台劳工的社会保障</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        平台劳工社会保障的现状和问题。
+                    </div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <h2>🏠 第八章：数字赋能的远程办公</h2>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">8.1.1 远程办公概述</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        远程办公的基本概念、发展历程和现状。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">8.1.2 远程办公设计</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        远程办公的组织设计和工作流程设计。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">8.2.1 人工智能"员工"的优缺点</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        人工智能在办公中的优势和局限性分析。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">8.2.2 企业对人工智能"员工"的管理</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        企业对AI员工的管理策略和方法。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">8.3.1 数字劳工平台的工作内容</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字劳工平台的工作内容特点和分类。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">8.3.2 数字劳工平台的工作职责</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字劳工平台的工作职责界定和管理。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="master">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">8.3.3 数字劳工平台的工作关系</div>
+                        <span class="mastery-level mastery-master">掌握</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字劳工平台的工作关系管理和协调。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">8.4 数字赋能的工作设计权威文献解读</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字工作设计领域经典文献的深度解读。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">8.5 数字赋能的工作设计经典案例解读</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字工作设计成功案例的深入分析。
+                    </div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <h2>🔍 第九章：数字人力资源管理的多重视角</h2>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">9.1.1 数字技术引发的人力资源管理伦理问题</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字技术在HR管理中引发的伦理问题和挑战。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">9.1.2 数字人力资源管理伦理问题的对策</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        应对数字HR管理伦理问题的策略和方法。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">9.2.1 数字时代的职业生涯现状</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字时代职业生涯发展的现状和特点。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">9.2.2 数字时代职业生涯适应力提升路径</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字时代提升职业生涯适应力的方法和路径。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">9.2.3 数字时代下斜杠青年的职业生涯管理</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        斜杠青年在数字时代的职业生涯管理策略。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">9.3.1 数字人力资源管理服务业的特点</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字HR管理服务业的特点和发展模式。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">9.3.2 数字人力资源管理服务业的发展趋势</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字HR管理服务业的发展趋势和前景。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="familiar">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">9.3.3 数字人力资源管理服务业面临的挑战</div>
+                        <span class="mastery-level mastery-familiar">了解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        数字HR管理服务业面临的主要挑战和问题。
+                    </div>
+                </div>
+                <div class="knowledge-item" data-mastery="understand">
+                    <div class="knowledge-header">
+                        <div class="knowledge-title">9.3.4 数字人力资源管理服务业的发展对策</div>
+                        <span class="mastery-level mastery-understand">理解</span>
+                    </div>
+                    <div class="knowledge-details">
+                        促进数字HR管理服务业发展的对策和建议。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterByMastery(mastery) {
+            const items = document.querySelectorAll('.knowledge-item');
+            const buttons = document.querySelectorAll('.filter-button');
+            
+            // 更新按钮状态
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // 过滤显示
+            items.forEach(item => {
+                if (mastery === 'all' || item.dataset.mastery === mastery) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html> 
