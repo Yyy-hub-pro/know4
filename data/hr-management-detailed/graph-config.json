@@ -1,0 +1,30 @@
+{
+  "layers": {
+    "1": {
+      "name": "知识点层",
+      "color": "#3b82f6",
+      "size": 16,
+      "position": "bottom",
+      "icon": "book-open"
+    },
+    "2": {
+      "name": "岗位层",
+      "color": "#10b981",
+      "size": 20,
+      "position": "middle",
+      "icon": "briefcase"
+    },
+    "3": {
+      "name": "产业层",
+      "color": "#f59e0b",
+      "size": 24,
+      "position": "top",
+      "icon": "building"
+    }
+  },
+  "layout": {
+    "width": 1600,
+    "height": 1000,
+    "force_strength": -400
+  }
+}
